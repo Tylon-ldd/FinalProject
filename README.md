@@ -2,7 +2,7 @@
 
 ##2. userProfile is not finished yet.
 
-##3. When you run the application with http-server command, you need to add '/index.html' to the address.
+##3. When you run the application with http-server command, you should change the path to '/dist/businessCardsApp/' and add '/index.html' to the address.
 
 ##4. You can login with Email: chandlergegg@gmail.com and Password: 5DeepBreaths!
 
