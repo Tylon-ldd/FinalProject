@@ -1,0 +1,39 @@
+<div class="jc-column jc-border">
+  <h2 class="new-card-header">Edit Business Card</h2>
+  <div class="new-card">
+    <form [formGroup]="cardForm" (ngSubmit)="onSubmit()">
+
+      <label class="new-label">* Name ( Required! )</label>
+      <div class="new-field">
+        <input type="text" placeholder="FirstName" formControlName="firstName" class="new-input">
+        <input type="text" placeholder="LastName" formControlName="lastName" class="new-input">
+        <div *ngIf="cardForm.get('firstName').touched && cardForm.get('firstName').hasError('required')">First Name
+          Required!</div>
+        <div *ngIf="cardForm.get('lastName').touched && cardForm.get('lastName').hasError('required')">Last Name Required!
+        </div>
+      </div>
+
+      <label class="new-label">* Phone ( Required! )</label>
+      <div class="new-field">
+        <input type="text" placeholder=" Your Phone Number" formControlName="phoneNumber" class="new-input">
+        <div *ngIf="cardForm.get('phoneNumber').touched && cardForm.get('phoneNumber').hasError('required')">Phone Number
+          Required!</div>
+      </div>
+
+      <label class="new-label">E-mail</label>
+      <div class="new-field">
+        <input type="text" placeholder=" Email address" formControlName="email" class="new-input">
+      </div>
+
+      <label class="new-label">Additional Info</label>
+      <div class="new-field">
+        <input type="text" placeholder=" Additional Info" formControlName="info" class="info-input">
+      </div>
+
+      <div>
+        <input class="save-button" type="submit" value="Save" [disabled]="!cardForm.valid">
+      </div>
+
+    </form>
+  </div>
+</div>

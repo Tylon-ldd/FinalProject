@@ -1,0 +1,18 @@
+<div class="page-header">
+  <div class="container">
+    <nav class="navbar navbar-expand navbar-light bg-light">
+      <a class="navbar-brand" [routerLink]="['/list']">Business Cards App</a>
+      <div class="navbar-nav" id="navbarNav">
+        <a class="nav-link active" [routerLink]="['/list']">Dashboard</a>
+        <a class="nav-link active" [routerLink]="['/newCard']">New Card</a>
+        <a class="nav-link active" *ngIf="!(loginService.user | async)" [routerLink]="['/login']">Login</a>
+        <a class="nav-link active" *ngIf="loginService.user | async" (click)="logout()">Logout</a>
+      </div>
+    </nav>
+  </div>
+</div>
+<div id="content">
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
+</div>

@@ -1,0 +1,7 @@
+
+<div class="pushRight">
+    <p class="list-header">Business Card List</p>
+</div>
+
+<business-card *ngFor="let card of businessCardList | async; let i = index" [i]="i" [bCard]="card" ></business-card>
+

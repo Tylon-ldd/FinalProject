@@ -1,0 +1,20 @@
+<!-- Business Card layout-->
+<div class="ui two column grid">
+  <div class="row">
+    <div class="card">
+      <span class="card-header ">
+        <span class="card-num">Business Card {{i + 1}} </span>
+        <span class="card-uid">UID: {{ bCard.id }} </span>
+      </span>
+      <div class="card-item">FirstName: {{bCard.firstName }} </div>
+      <div class="card-item">LastName: {{bCard.lastName }} </div>
+      <div class="card-item">Cell Phone: {{bCard.phoneNumber }}</div>
+      <div class="card-item">E-mail: {{bCard.email }}</div>
+      <div class="card-item">Additonal Info: {{bCard.info }}</div>
+      <span>
+        <button class="card-button" (click)="editCard(bCard.id)">Edit</button>
+        <button class="card-button" (click)="deleteCard()">Delete</button>
+      </span>
+    </div>
+  </div>
+</div>
