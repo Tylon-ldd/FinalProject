@@ -7,3 +7,5 @@
 ##4. You can login with Email: chandlergegg@gmail.com and Password: 5DeepBreaths!
 
 ##5. this is Dongdong Li's CSC 436 Final Project.
+
+##6. The address is : https://github.com/Tylon-ldd/FinalProject.git
